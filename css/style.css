@@ -1,0 +1,261 @@
+.wrapper {
+    width: 934px;
+    margin: 0 auto;
+}
+
+.nav-header {
+    display: flex;
+    margin-top: 44px;
+    align-items: center;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: flex;
+    margin-left: auto;
+}
+
+li {
+    margin-left: 36px;
+}
+
+.nav-item {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #222;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+a:hover {
+    color: #fed136;
+}
+
+.service {
+    margin-top: 120px;
+}
+
+h2 {
+    text-align: center;
+    color: #222222;
+    font-family: Montserrat;
+    font-size: 40px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    margin-bottom: 21px;
+}
+
+.text2 {
+    text-align: center;
+    color: #777;
+    font-style: italic;
+}
+
+.service-item {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 64px;
+}
+
+.service-list {
+    width: 274px;
+    padding-top: 14px;
+}
+
+h6 {
+    text-align: center;
+    color: #222222;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: 700;
+    letter-spacing: -0.45px;
+}
+
+.text {
+    color: #777777;
+    font-family: "Roboto Slab";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.35px;
+}
+
+.service-list::before {
+    width: 70px;
+    border: 3px solid #fed136;
+    border-radius: 50%;
+    line-height: 0;
+    text-align: center;
+    background: #fff;
+    margin: 0 auto;
+    }
+
+.service-list::before {
+    display: block;
+    content: '';
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 70px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url(../img/Icon-Basket.png);
+}
+
+.web::before {
+    background-image: url(../img/Icon-Laptop.png);
+}
+
+.security::before {
+    background-image: url(../img/Icon-Locked.png);
+}
+
+main {
+    background-color: #222;
+    position: relative;
+    height: 680px;
+    width: 1404px;
+    margin: 0 auto;
+    margin-top: 120px;
+}
+
+h5 {
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    font-family: "Montserrat";
+    font-size: 40px;
+    font-weight: 700;
+    letter-spacing: -1px;
+    padding-top: 110px;
+    padding-bottom: 8px;
+    margin-bottom: 0;
+}
+
+.forms {
+    display: flex;
+    margin-top: 56px;
+    justify-content: space-between;
+}
+
+.map {
+    position: absolute;
+    background-image: url(../img/map.png);
+    background-repeat: no-repeat;
+    height: 536px;
+    width: 614px;
+    bottom: 22px;
+    right: 0;
+}
+
+.download-button {
+    width: 242px;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 700;
+    color: #ffffff;
+    font-family: Montserrat;
+    padding: 22px 22px;
+    background-color: #fed136;
+    cursor: pointer;
+    text-transform: uppercase;
+    position: absolute;
+    right: 580px;
+    bottom: 114px;
+}
+
+p {
+    text-align: center;
+}
+
+.text1,
+.email {
+    width: 435px;
+    height: 50px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding-left: 20px;
+    color: #bbbbbb;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.35px;
+    cursor: pointer;
+}
+
+.area {
+    display: block;
+    width: 435px;
+    height: 192px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    padding-left: 20px;
+    resize: none;
+    padding-top: 20px;
+    color: #bbbbbb;
+    font-family: Montserrat;
+    font-size: 14px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: -0.35px;
+    cursor: pointer;
+}
+
+.profile-form {
+     padding-bottom: 28px;
+ }
+
+textarea:focus {
+    outline: 0;
+}
+
+.profile-form input:focus {
+    outline: 0;
+ }
+
+input[type="email"]:valid,
+input[name="name"]:valid,
+textarea[name="any text"]:valid {
+    border-color: green;
+ }
+
+input[type="email"]:invalid,
+input[name="name"]:invalid,
+textarea[name="any text"]:invalid {
+border-color: red;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Montserrat Regular'), local('Montserrat-Regular'),
+         url('../css/fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
+         url('../css/fonts/montserrat-v14-latin-regular.woff') format('woff');
+  }
+
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Montserrat Bold'), local('Montserrat-Bold'),
+         url('../css/fonts/montserrat-v14-latin-700.woff2') format('woff2'),
+         url('../css/fonts/montserrat-v14-latin-700.woff') format('woff');
+}
+
+@font-face {
+    font-family: 'Roboto Slab';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../css/fonts/roboto-slab-v10-latin-regular.woff2') format('woff2'),
+         url('../css/fonts/roboto-slab-v10-latin-regular.woff') format('woff');
+  }
