@@ -1,5 +1,5 @@
 .wrapper {
-    width: 934px;
+    width: 940px;
     margin: 0 auto;
 }
 
@@ -27,7 +27,7 @@ li {
     text-decoration: none;
     text-align: center;
     color: #222;
-    font-family: Montserrat;
+    font-family: Montserrat, sans-serif;
     font-size: 14px;
     font-weight: 400;
     text-transform: uppercase;
@@ -43,8 +43,8 @@ a:hover {
 
 h2 {
     text-align: center;
-    color: #222222;
-    font-family: Montserrat;
+    color: #222;
+    font-family: Montserrat, sans-serif;
     font-size: 40px;
     font-weight: 700;
     text-transform: uppercase;
@@ -71,16 +71,16 @@ h2 {
 
 h6 {
     text-align: center;
-    color: #222222;
-    font-family: Montserrat;
+    color: #222;
+    font-family: Montserrat, sans-serif;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: -0.45px;
 }
 
 .text {
-    color: #777777;
-    font-family: "Roboto Slab";
+    color: #777;
+    font-family: "Roboto Slab", sans-serif;
     font-size: 14px;
     font-weight: 400;
     letter-spacing: -0.35px;
@@ -119,9 +119,8 @@ h6 {
 
 main {
     background-color: #222;
-    position: relative;
     height: 680px;
-    width: 1404px;
+    width: 100vw;
     margin: 0 auto;
     margin-top: 120px;
 }
@@ -139,13 +138,14 @@ h5 {
     margin-bottom: 0;
 }
 
-.forms {
+.profile-form {
     display: flex;
-    margin-top: 56px;
+    margin-top: 58px;
     justify-content: space-between;
 }
 
 .map {
+    display: block;
     position: absolute;
     background-image: url(../img/map.png);
     background-repeat: no-repeat;
@@ -155,12 +155,20 @@ h5 {
     right: 0;
 }
 
-.download-button {
+.back-map {
+    display: block;
+    width: 1404px;
+    height: 680px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.button {
+    position: absolute;
     width: 242px;
-    color: #ffffff;
+    color: #fff;
     font-size: 18px;
     font-weight: 700;
-    color: #ffffff;
     font-family: Montserrat;
     padding: 22px 22px;
     background-color: #fed136;
@@ -176,31 +184,49 @@ p {
 }
 
 .text1,
-.email {
-    width: 435px;
-    height: 50px;
+.email,
+.text4 {
+    width: 434px;
+    height: 48px;
     border: 1px solid #ccc;
     background-color: #fff;
     padding-left: 20px;
-    color: #bbbbbb;
+    color: #bbb;
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: -0.35px;
     cursor: pointer;
+}
+
+.text1,
+.email,
+.area {
+    outline: 4px solid transparent;
+    outline-offset: -2px;
+    transition: outline-color 0.1s;
+}
+
+.text4:focus {
+    outline: 0;
+}
+
+.text1,
+.email {
+   margin-bottom: 28px; 
 }
 
 .area {
     display: block;
     width: 435px;
-    height: 192px;
+    height: 186px;
     border: 1px solid #ccc;
     background-color: #fff;
     padding-left: 20px;
     resize: none;
-    padding-top: 20px;
-    color: #bbbbbb;
+    padding-top: 22px;
+    color: #bbb;
     font-family: Montserrat;
     font-size: 14px;
     font-weight: 700;
@@ -209,28 +235,18 @@ p {
     cursor: pointer;
 }
 
-.profile-form {
-     padding-bottom: 28px;
- }
-
-textarea:focus {
-    outline: 0;
+input[type="email"]:focus:invalid,
+textarea[name="body"]:focus:invalid,
+input[name="name"]:focus:invalid {
+outline-color: red;
+transition: outline-color 5s;
 }
 
-.profile-form input:focus {
-    outline: 0;
- }
-
-input[type="email"]:valid,
-input[name="name"]:valid,
-textarea[name="any text"]:valid {
-    border-color: green;
- }
-
-input[type="email"]:invalid,
-input[name="name"]:invalid,
-textarea[name="any text"]:invalid {
-border-color: red;
+input[type="email"]:focus:valid,
+textarea[name="body"]:focus:valid,
+input[name="name"]:focus:valid {
+outline-color: green;
+transition: outline-color .4s;
 }
 
 @font-face {
@@ -238,8 +254,8 @@ border-color: red;
     font-style: normal;
     font-weight: 400;
     src: local('Montserrat Regular'), local('Montserrat-Regular'),
-         url('../css/fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
-         url('../css/fonts/montserrat-v14-latin-regular.woff') format('woff');
+         url('../fonts/montserrat-v14-latin-regular.woff2') format('woff2'),
+         url('../fonts/montserrat-v14-latin-regular.woff') format('woff');
   }
 
 @font-face {
@@ -247,8 +263,8 @@ border-color: red;
     font-style: normal;
     font-weight: 700;
     src: local('Montserrat Bold'), local('Montserrat-Bold'),
-         url('../css/fonts/montserrat-v14-latin-700.woff2') format('woff2'),
-         url('../css/fonts/montserrat-v14-latin-700.woff') format('woff');
+         url('../fonts/montserrat-v14-latin-700.woff2') format('woff2'),
+         url('../fonts/montserrat-v14-latin-700.woff') format('woff');
 }
 
 @font-face {
@@ -256,6 +272,6 @@ border-color: red;
     font-style: normal;
     font-weight: 400;
     src: local(''),
-         url('../css/fonts/roboto-slab-v10-latin-regular.woff2') format('woff2'),
-         url('../css/fonts/roboto-slab-v10-latin-regular.woff') format('woff');
+         url('../fonts/roboto-slab-v10-latin-regular.woff2') format('woff2'),
+         url('../fonts/roboto-slab-v10-latin-regular.woff') format('woff');
   }
